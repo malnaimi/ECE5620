@@ -13,8 +13,8 @@ set(BUILD_TESTS TRUE)
 
 if(UNIX AND NOT APPLE)
   set(OS "linux")
-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Werror")
-  set(OS_LIBS pthread rt)
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -Wall -Wextra -Werror")
+  set(OS_LIBS m pthread rt)
 endif()
 
 message("Build OS is ${OS}")
